@@ -1,0 +1,9 @@
+{
+  "query": "DROP TABLE IF EXISTS valuations;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 91z1sZbfwzckC3V.root --database Mut7DJMK5k3DxCq673EUuU --execute DROP TABLE IF EXISTS valuations;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 357
+}

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS marketData (\n  id VARCHAR(64) PRIMARY KEY,\n  district VARCHAR(128) NOT NULL,\n  propertyType VARCHAR(64) NOT NULL,\n  averagePrice INT NOT NULL,\n  averagePricePerSqm INT NOT NULL,\n  minPrice INT,\n  maxPrice INT,\n  sampleSize INT NOT NULL,\n  dataQuality INT NOT NULL,\n  source VARCHAR(256) NOT NULL,\n  sourceUrl TEXT,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 91z1sZbfwzckC3V.root --database Mut7DJMK5k3DxCq673EUuU --execute CREATE TABLE IF NOT EXISTS marketData (\n  id VARCHAR(64) PRIMARY KEY,\n  district VARCHAR(128) NOT NULL,\n  propertyType VARCHAR(64) NOT NULL,\n  averagePrice INT NOT NULL,\n  averagePricePerSqm INT NOT NULL,\n  minPrice INT,\n  maxPrice INT,\n  sampleSize INT NOT NULL,\n  dataQuality INT NOT NULL,\n  source VARCHAR(256) NOT NULL,\n  sourceUrl TEXT,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 340
+}

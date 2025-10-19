@@ -1,0 +1,76 @@
+{
+  "north": [
+    "Al Olaya",
+    "Al Narjis",
+    "Al Malka",
+    "Al Qirwan",
+    "Al Yasmin",
+    "Al Sahafa",
+    "Al Nakheel",
+    "Hittin",
+    "Al Aqiq",
+    "Al Muhammadiyah",
+    "Al Andalus",
+    "Al Rabwah",
+    "Al Nada",
+    "Al Ghadir",
+    "Al Rabie",
+    "Granada",
+    "Al Wurud",
+    "Al Murooj"
+  ],
+  "east": [
+    "Al Ramal",
+    "Al Munsiyah",
+    "Qurtubah",
+    "Al Yarmouk",
+    "Ash Shimal",
+    "Al Nasim",
+    "Al Rayan",
+    "Al Hamra",
+    "Al Rawdah",
+    "Al Fayha",
+    "Al Khaleej",
+    "Al Jazeera",
+    "Al Iskan",
+    "Al Waha",
+    "Al Manar"
+  ],
+  "west": [
+    "Dhahrat Namar",
+    "Tuwaiq",
+    "Irqah",
+    "Al Badi'ah",
+    "Al Suwaidi",
+    "Al Aridh",
+    "Al Shifa",
+    "Al Aziziyah West",
+    "Al Manakh",
+    "Al Wizarat"
+  ],
+  "south": [
+    "Al Aziziyah",
+    "Al Dar Al Baida",
+    "Badr",
+    "Al Hazm",
+    "Taybah",
+    "Al Manfuhah",
+    "Al Dubiyah",
+    "Al Shamsiyah",
+    "Al Faisaliyah",
+    "Al Dirah"
+  ],
+  "central": [
+    "Al Malaz",
+    "Al Sulimaniyah",
+    "Al Margab",
+    "Al Bateha",
+    "Al Murabba",
+    "Al Futah",
+    "Al Deerah",
+    "Al Wisham",
+    "Al Salam",
+    "King Fahd District"
+  ]
+}
+
