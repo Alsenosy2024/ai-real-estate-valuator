@@ -53,7 +53,13 @@ An intelligent, AI-powered property valuation platform specifically designed for
 - AWS S3 credentials (for report storage)
 - OAuth server credentials
 
-## 🚀 Getting Started
+## 🚀 Quick Start
+
+### Production Deployment (15 minutes)
+
+**See [PRODUCTION_QUICKSTART.md](PRODUCTION_QUICKSTART.md) for step-by-step guide!**
+
+### Development Setup
 
 ### 1. Clone the Repository
 
@@ -138,24 +144,41 @@ npm run build
 ```
 
 This creates optimized production builds:
-- Frontend: `dist/` directory (static files)
-- Backend: `dist/` directory (Node.js bundle)
+- Frontend: `dist/public/` directory (static files)
+- Backend: `dist/index.js` (Node.js bundle)
 
-### Start Production Server
+### Production Deployment Options
 
-```bash
-npm start
-```
+1. **Firebase Hosting + Cloud Functions** (Recommended)
+   ```bash
+   firebase deploy
+   ```
+
+2. **Docker Container**
+   ```bash
+   docker build -t real-estate-valuator .
+   docker run -p 3000:3000 --env-file .env real-estate-valuator
+   ```
+
+3. **Traditional Hosting**
+   ```bash
+   npm run build
+   npm start
+   ```
+
+**Full deployment guide:** See [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## 🔧 Configuration
 
-### Database Schema
+### Database (Firebase Firestore)
 
-The application uses three main tables:
+The application uses Firebase Firestore with three main collections:
 
 1. **users**: User authentication and profiles
 2. **valuations**: Property valuation records
 3. **marketData**: Cached market data for faster valuations
+
+**Security Rules:** Firestore rules ensure users can only access their own data, with admin override.
 
 ### API Endpoints
 
