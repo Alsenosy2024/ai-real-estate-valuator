@@ -4,11 +4,13 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { nanoid } from "nanoid";
-import * as db from "./db";
+// Use Firebase for production database
+import * as db from "./firebaseDb";
 import { calculateEnhancedValuation, PropertyInput } from "./enhancedValuationService";
 import { generateReport } from "./reportService";
 import { generateEnhancedProfessionalReport } from "./enhancedProfessionalReport";
-import { storagePut } from "./storage";
+// Use Firebase Storage for production
+import { uploadToFirebaseStorage } from "./firebaseStorage";
 
 export const appRouter = router({
   system: systemRouter,
@@ -221,10 +223,10 @@ export const appRouter = router({
           language: input.language,
         });
 
-        // Upload to S3
-        const fileName = `valuation-report-${valuation.id}-${Date.now()}.pdf`;
-        const { url: reportUrl } = await storagePut(
-          `reports/${fileName}`,
+        // Upload to Firebase Storage
+        const fileName = `reports/valuation-report-${valuation.id}-${Date.now()}.pdf`;
+        const { url: reportUrl } = await uploadToFirebaseStorage(
+          fileName,
           pdfBuffer,
           'application/pdf'
         );
